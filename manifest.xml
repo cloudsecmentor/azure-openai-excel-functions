@@ -3,9 +3,9 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <Id>00aeeb98-f4d9-4db0-a1e6-cdc652c08e34</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>Chris Price &amp; Robat Williams</ProviderName>
+  <Id>3839F9BE-BF2A-4009-874C-C5973A7FEA65</Id>
+  <Version>1.0.0.1</Version>
+  <ProviderName>Chris Price &amp; Robat Williams  &amp; cloudsecmentor</ProviderName>
   <DefaultLocale>en-GB</DefaultLocale>
   <DisplayName DefaultValue="OpenAI API Functions for Excel"/>
   <Description DefaultValue="Invoke the OpenAI API calls from formula."/>
