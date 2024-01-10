@@ -10,6 +10,9 @@ export async function chatComplete(messages, params, invocation) {
   const {
     API_KEY: apiKey,
     API_BASE: apiBase = 'https://api.openai.com/',
+    API_COMPLITIONS_SUFFIX: apiComplitionSuffix = 'v1/chat/completions',
+    AUTH_KEY_NAME: authKeyName = 'Authorization',
+    AUTH_KEY_PREFIX: authKeyPrefix = 'Bearer ',
     messages: _,
     [EMPTY_OR_ZERO]: __,
     ...userParams
@@ -40,11 +43,11 @@ export async function chatComplete(messages, params, invocation) {
     const abortController = new AbortController();
     invocation.onCanceled = () => abortController.abort();
 
-    const response = await fetcher.fetch(`${apiBase}v1/chat/completions`, {
+    const response = await fetcher.fetch(`${apiBase}${apiComplitionSuffix}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
+        [authKeyName]: `${authKeyPrefix}${apiKey}`,
       },
       body: JSON.stringify(requestBody),
       signal: abortController.signal,
